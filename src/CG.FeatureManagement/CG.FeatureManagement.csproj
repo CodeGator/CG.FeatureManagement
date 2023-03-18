@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<Description>This package contains feature management extensions used by other CodeGator packages.
+
+Platforms supported:
+.NET 6.x or above
+		</Description>
+		<Company>CodeGator</Company>
+		<Authors>Martin Cook</Authors>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Copyright>Copyright © 2022 - 2023 by CodeGator.</Copyright>
+		<PackageProjectUrl>https://github.com/CodeGator/CG.FeatureManagement</PackageProjectUrl>
+		<PackageTags>feature, feature mananegment, CG.FeatureMangement, CodeGator</PackageTags>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<RepositoryUrl>https://github.com/CodeGator/CG.FeatureManagement</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageIcon>packageDefaultIcon-50x50.png</PackageIcon>
+		<PackageIconUrl />
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>bin\Debug\net6.0\CG.FeatureManagement.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\packageDefaultIcon-50x50.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.FeatureManagement" Version="2.5.1" />
+		<PackageReference Include="Nerdbank.GitVersioning" Version="3.5.119">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>
